@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-<div class="topModule clearfix">
-
-  <div class="container slider">
+<div class="container slider">
 
     <div class="flexslider">
       <ul class="slides">
@@ -41,33 +39,63 @@
 
        ?>
      </ul>
-   </div>
+   </div><!-- flex-slider -->
 
- </div>
+ </div><!-- container slider -->
 
- <div class="container tagline">
+ <div class="tagline">
 
-  <h1><?php echo ot_get_option('tagline') ?></h1>
-  <h2><?php echo ot_get_option('taglinedescription') ?></h2>
-
-</div>
-<div class="container topModuleDetails clearfix">
-
-  <div class="eight columns topModuleAbout">
-
-    <?php echo ot_get_option('leftcontent') ?>
+      <h1><?php echo ot_get_option('tagline') ?></h1>
+      <h2><?php echo ot_get_option('taglinedescription') ?></h2>
 
   </div>
 
-  <div class="eight columns topModuleTestimonial">
+ <!--  <div class="container topModuleDetails clearfix">
 
-    <?php echo ot_get_option('rightcontent') ?>             
+      <div class="eight columns topModuleAbout">
 
-  </div>
+          <?php echo ot_get_option('leftcontent') ?>
 
-</div>
+      </div>
 
-</div>
+      <div class="eight columns topModuleTestimonial">
+
+         <?php echo ot_get_option('rightcontent') ?>             
+
+      </div>
+
+  </div> -->
+
+<div id="front-content-wrapper" class="clearfix">
+    <div id="front-sidebar">
+      <div id="front-sermons">
+        <h2><a href="<?php echo home_url( '/sermons' ); ?>">listen to sermons</a></h2>
+      </div><!-- front-sermons -->
+
+      <div id="pastor">
+          <div class="rounded-thumbnail">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/pastor.jpg" alt="our pastor">
+          </div>
+          <h2>our pastor</h2>
+      </div><!-- pastor -->
+    </div><!-- front-sidebar -->
+
+    <div id="front-content">
+        <h2>welcome to the christian fellowship international</h2>
+        <p>It is not by accident that God has directed you to this website. Pilgrims Community Church under the cutting edge and dynamic leadership of our visionary founding Pastor, Dr Japhat Ndemera is a holistic, life changing, bible based, coaching clinic and fountain of eternal life. We are a church that is planted, positioned and prepared for, "Empowering You For the Journey", through this life into eternity.
+ 
+As we celebrate and reflect on these ten fruitful years of flourishing in the favor of God, we bear witness that God has exceeded our greatest imaginations. At Pilgrims Community; The word is proclaimed, souls are being set free, yokes broken, lives changed, favor received and God is glorified. All that we have ever needed as Pilgrims, God's hand has provided without measure. There is an atmosphere of miracles that pronounces that, the best is yet to come!</p>
+
+
+        <h2>featured video</h2>
+
+        <iframe width="100%" height="315" src="//www.youtube.com/embed/IeUAwvovJ8g" frameborder="0" allowfullscreen></iframe>
+    </div><!-- front-content -->
+</div><!-- front-content-wrapper -->
+
+<!-- <div class="topModule clearfix">
+
+</div> --><!-- top-module -->
 
 
 <?php if (ot_get_option('wmodulehome') == 'yes') {  ?>

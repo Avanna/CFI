@@ -170,9 +170,9 @@ background: url(<?php echo $footerbg[4] ?>) <?php echo $footerbg[1] ?> <?php ech
 
     <body data-spy="scroll" data-target=".subnav" data-offset="50" <?php body_class(); ?>>
 
-    <header> 
+    <header id="main-header"> 
             
-        <div class="navBg"></div>
+        <!-- <div class="navBg"></div> -->
         
         <div class="container">
             
@@ -183,7 +183,6 @@ background: url(<?php echo $footerbg[4] ?>) <?php echo $footerbg[1] ?> <?php ech
                 </a>
             </div>
 
-            
              <nav class="mainNav">
 
                     <?php
