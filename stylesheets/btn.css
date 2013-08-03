@@ -1,0 +1,107 @@
+.button-big, .button-small {
+    color: #eee !important;
+    word-spacing: 0.25em;
+   font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-transform: none !important;
+    line-height: 22px;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.25);
+    padding: 12px 25px 11px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    text-decoration: none;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0, 0.35), inset 0 1px 0 rgba(255,255,255, 0.35), inset 0 10px 20px rgba(255,255,255, 0.12), inset 0 -10px 30px rgba(0,0,0, 0.12);
+    -moz-box-shadow:  0 2px 3px rgba(0,0,0, 0.35), inset 0 1px 0 rgba(255,255,255, 0.35), inset 0 10px 20px rgba(255,255,255, 0.12), inset 0 -10px 30px rgba(0,0,0, 0.12);
+    box-shadow: 0 2px 3px rgba(0,0,0, 0.35), inset 0 1px 0 rgba(255,255,255, 0.35), inset 0 10px 20px rgba(255,255,255, 0.12), inset 0 -10px 30px rgba(0,0,0, 0.12);
+}
+.button-small {
+    padding: 6px 12px 5px;
+    font-size: 11px;
+}
+.button-big:hover, .button-small:hover {
+    color: rgba(255,255,255, 0.75);
+    text-decoration: none;
+    -webkit-box-shadow: 0 2px 1px rgba(0,0,0, 0.2), inset 0 1px 1px rgba(255,255,255, 0.5), inset 0 10px 20px rgba(255,255,255, 0.20), inset 0 -10px 20px rgba(0,0,0, 0.12);
+    -moz-box-shadow: 0 2px 1px rgba(0,0,0, 0.2), inset 0 1px 1px rgba(255,255,255, 0.5), inset 0 10px 20px rgba(255,255,255, 0.20), inset 0 -10px 20px rgba(0,0,0, 0.12);
+    box-shadow: 0 2px 1px rgba(0,0,0, 0.2), inset 0 1px 1px rgba(255,255,255, 0.5), inset 0 10px 20px rgba(255,255,255, 0.20), inset 0 -10px 20px rgba(0,0,0, 0.12);
+}
+.button-big:active, .button-small:active {
+    -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0, 0.3), inset 0 10px 20px rgba(0,0,0, 0.08);
+    -moz-box-shadow: inset 0 2px 2px rgba(0,0,0, 0.3), inset 0 10px 20px rgba(0,0,0, 0.08);
+    box-shadow: inset 0 2px 2px rgba(0,0,0, 0.3), inset 0 10px 20px rgba(0,0,0, 0.08);
+}
+.rounded3 {
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.rounded5 {
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.rounded10 {
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.rounded99 {
+	-webkit-border-radius: 99px;
+    -moz-border-radius: 99px;
+    border-radius: 99px;
+}
+.salmon {
+    background: #d5383c;
+    border: 1px solid #94272a;
+}
+.purple {
+    background: #6b63cf;
+    border: 1px solid #514b9a;
+}
+.orange {
+	background: #f76b16;
+        border: 1px solid #bd5414;
+}
+.blue {
+	background: #3b5998;
+        border: 1px solid #283c67;
+}
+.lightblue {
+	background: #5aa3ac;
+        border: 1px solid #3a656a;
+}
+.red {
+	background: #c7322c;
+        border: 1px solid #a02924;
+}
+.green {
+	background: #87ac5a;
+        border: 1px solid #566d39;
+}
+.teal {
+	background: #26a77b;
+        border: 1px solid #1e7e5d;
+}
+
+.grey {
+	background: #7a7a7a;
+        border: 1px solid #414141;
+}
+.sand {
+	background: #c78942;
+        border: 1px solid #7e5628;
+}
+.taupe {
+	background: #a58d72;
+        border: 1px solid #605344;
+}
+.brown {
+        background: #74614f;
+        border: 1px solid #4d4034;
+}
+.peach {
+	background: #d27341;
+        border: 1px solid #924f2c;
+}
