@@ -314,7 +314,7 @@ line-height: 28px;
     width:56%;
     min-height:400px;
     padding:4%;
-    background:#fff;
+    background:#fff url(images/dashed_bg.jpg) repeat-x top;
 }
 
 .topModule {
@@ -339,6 +339,7 @@ line-height: 28px;
     padding: 22px 35px;
     margin:0 0 36px 0;
      position: relative;
+     background:#fff;
 }
 .pageTitle {
      padding: 35px 35px 33px 35px;
