@@ -23,19 +23,35 @@ h1, h2, h3, h4, h5 {
     text-transform: capitalize;
 }
 
+h2, h3 {
+    color:#555;
+}
+
 h2 {
-    font-size:22px;
     font-family: 'oswald', 'helvetica neue', Helvetica, Arial, sans-serif;
-    margin:0 0 18px 0;
+    font-size:22px;  
+    font-weight:300;
+    margin:0 0 12px 0;
+}
+
+h3 {
+    font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
+    font-size:14px;
+    font-weight:bold;
 }
 
 a {
     text-decoration: none;
 }
 
+li p {
+    line-height:1.5;
+}
+
 .rounded-thumbnail {
     width:140px;
     height:140px;
+    border:7px #FE745D solid;
     -webkit-border-radius: 300px;
     -moz-border-radius: 300px;
     border-radius: 300px;
@@ -60,7 +76,7 @@ a {
 .pageContent a:hover { color: #924f2c; }
 .pageContent h1, .pageContent h2, .pageContent h3, .pageContent h4, .pageContent h5, .pageContent h6, #contactForm label, .widget h4 {
     color: #6A6662;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     font-size: 29px;
@@ -114,9 +130,11 @@ a {
     color: red;
 }
 body {
-    background:#f6f4f0  /*url(images/bodyBg.png) repeat*/;
-    font-size: 0.9375em;
+    font-family: georgia;
+    background:#f6f4f0  url(images/pattern_bg.jpg);
+    font-size: 0.8125em;
     color:#555;
+    line-height:1.5;
 }
 
 header {
@@ -124,7 +142,7 @@ header {
     height: 120px;
     position: relative;
     border-bottom: 1px #ddd solid;
-    background: #fff url(images/dashed_bg.jpg) repeat-x bottom;
+    background: url(images/dashed_bg.jpg) repeat-x bottom;
 }
 .navBg {
     position: absolute;
@@ -218,10 +236,10 @@ line-height: 28px;
 .slider {
     margin: 0;
     width: 100%;
-    padding:0 0 7px 0;
+    padding:0 0 0;
     position: relative;
     display: none;
-    background:#fff url(images/dashed_bg.jpg) repeat-x bottom;
+    /*background:#fff url(images/dashed_bg.jpg) repeat-x bottom;*/
     /*padding:24px 3%;*/
     /*border:1px #fff solid;*/
 }
@@ -275,21 +293,26 @@ line-height: 28px;
 #front-content-wrapper {
     width:90%;
     min-height: 300px;
+    padding:18px 0 0 0;
     margin:0 auto 36px auto;
+    background:#fff url(images/dashed_bg.jpg) repeat-x top;
+    border:1px #eee solid;
 }
 
 #front-sidebar {
     float:left;
     width:33%;
     min-height:400px;
-    background:#fff;
+    background:#fff url(images/page_bg.jpg);
 }
 
 #front-sermons {
     height:217px;
-    background: url(images/sermon_bg.png) no-repeat;
+    background: url(images/sermon_bg.png) no-repeat 0 -12px;
+    background-size: 100% auto;
     text-align: center;
-    margin:0 auto 36px auto;
+    margin:0 auto;
+    overflow: visible;
 }
 
 #front-sermons h2 {
@@ -306,15 +329,136 @@ line-height: 28px;
 }
 
 #pastor {
+    padding:24px;
+    background:#f8f8f9 url(images/page_bg.jpg);
     text-align: center;
+}
+
+#pastor h2 {
+    display:inline-block;
+    padding:0px 18px;
+    margin:12px 0 6px;
+    background: #fff;
+    border:1px #ddd solid;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
 
 #front-content {
     float:right;
-    width:56%;
+    width:59%;
     min-height:400px;
     padding:4%;
-    background:#fff url(images/dashed_bg.jpg) repeat-x top;
+}
+
+#front-events {
+    padding:24px 9%;
+    /*background: url(images/dashed_bg.jpg) repeat-x top;*/
+    border-top:1px #ddd dotted;
+    border-bottom:1px #ddd dotted;
+}
+
+#front-events li {
+    padding:18px 18px 9px;
+    border-top: 1px #ddd solid;
+    background: #fff;
+}
+
+#front-events li:nth-last-of-type(1) {
+    border-bottom: 1px #ddd solid;
+}
+
+#front-events li img {
+    float:left;
+    width:72px;
+    margin:0 18px 18px 0;
+    border:5px #ddd solid;
+}
+
+#front-events h3 {
+    line-height: 1.2;
+    margin:0 0 9px 0;
+}
+
+#front-events p {
+    line-height: 1.2;
+    margin:0 0 6px 0;
+}
+
+#front-events h3 {
+    font-size:14px;
+}
+
+#front-news {
+    padding:0 0 36px 0;
+    margin:0 0 24px 0;
+    background: url(images/dashed_bg.jpg) repeat-x bottom;
+}
+
+#front-news li {
+    padding:0;
+    margin:0 0 18px 0;
+    position:relative;
+    border-bottom: 1px #ddd dotted;
+}
+
+#front-news .date {
+    width:64px;
+    height:64px;
+    padding:0 0 0;
+    margin:0 0 6px 0;
+    position:absolute;
+    right:-12%;
+    background:#fff;
+    border: 4px #ddd solid;
+    text-align: center;
+    -webkit-border-radius: 240px;
+    -moz-border-radius: 240px;
+    border-radius: 240px;
+    overflow: hidden;
+}
+
+#front-news .date h3 {
+    font-size:14px;
+    font-weight:bold;
+    text-transform: uppercase;
+    line-height: 32px;
+}
+
+#front-news .date h4 {
+    font-family: 'oswald';
+    font-size:16px;
+    padding:0;
+    margin:0;
+    background:#FAB941;
+    color:#fff;
+    line-height: 32px;
+}
+
+#front-news h3 {
+    margin:0;
+}
+
+#front-news img {
+    float:left;
+    margin:0 18px 18px 0;
+    border:5px #ddd solid;
+}
+
+#front-gallery {
+    padding:24px 9%;
+    border-top:1px #ddd dotted;
+    border-bottom:1px #ddd dotted;
+}
+
+#front-gallery .ngg-gallery-thumbnail-box {
+     width:46%;
+}
+
+#front-gallery .ngg-gallery-thumbnail img {
+    border:1px #ddd solid;
+    padding:5%;
 }
 
 .topModule {
@@ -361,7 +505,7 @@ width: 100%;
     font-weight: 400;
     color: #6a6662;
     font-size: 23px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     margin-bottom: 5px;
     line-height: 35px;
 }
@@ -374,7 +518,7 @@ width: 100%;
     line-height: 28px;
 }
 .topModuleDetails, .pageContent {
-    background:#fff /*url(images/woolBg.png) #fbfbfb repeat*/;
+    background:#fff url(images/page_bg.jpg);
      padding: 40px 35px 20px 35px;
      -webkit-border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
@@ -663,7 +807,7 @@ border-radius: 0 0 3px 3px;
     font-size: 15px !important;
     font-family: 'Oswald', sans-serif;
     line-height: 26px !important;
-     text-transform: none !important;
+     /*text-transform: none !important;*/
     margin-bottom: 5px;
 }
 .single-events .postListTitle  {
@@ -673,7 +817,7 @@ border-radius: 0 0 3px 3px;
 .postListTitle h1 {
     font-size: 22px !important;
     word-spacing: 0.1em !important;
-    text-transform: none !important;
+    /*text-transform: none !important;*/
 }
 .postEventsDetails span, .postNewsDetails span  {
     color: #c4c4c1;

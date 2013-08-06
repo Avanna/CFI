@@ -304,4 +304,18 @@ function fn_googleMaps($atts, $content = null) {
 }
 add_shortcode("googlemap", "fn_googleMaps");
 
+function ks_excerpt($limit = 25) {
+  
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
 
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  } 
+
+  $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+
+  echo '<p>'.$excerpt.'</p>';
+}

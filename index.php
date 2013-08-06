@@ -77,10 +77,116 @@
             <img src="<?php echo get_template_directory_uri(); ?>/images/pastor.jpg" alt="our pastor">
           </div>
           <h2>our pastor</h2>
+          <h3>Pastor Ndemera</h3>
       </div><!-- pastor -->
+
+      <ul id="front-events">
+
+        <h2>upcoming events</h2>
+
+      <?php
+          $arguments = array(
+              'post_type' => 'events',
+              'post_status' => 'publish',
+              'paged' => $paged
+          );
+
+          $events_query = new WP_Query($arguments);
+
+          dd_set_query($events_query);
+      ?>
+                               
+      <?php 
+          if ($events_query->have_posts()) : 
+          while ($events_query->have_posts()) : $events_query->the_post(); 
+      ?>
+        
+        <li class="clearfix">
+                          
+        <?php 
+
+          $thumbimg = get_post_meta(get_the_ID(), 'thumbimg', true);
+          $facebookurl = get_post_meta(get_the_ID(), 'facebookurl', true);
+          $location = get_post_meta(get_the_ID(), 'location', true);
+          $date = get_post_meta(get_the_ID(), 'date', true);
+          $time = get_post_meta(get_the_ID(), 'time', true);
+          $price = get_post_meta(get_the_ID(), 'price', true);
+
+        ?>
+
+        <?php if($thumbimg) : ?>
+            <a href="<?php the_permalink(); ?>"><img alt="" src="<?php echo $thumbimg; ?>" /></a>
+        <?php endif; ?>
+
+        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+        <?php if($date) : ?>
+          <p><?php echo $date; ?></p>
+        <?php endif; ?>
+
+        <?php if($location) : ?>
+          <p><?php echo $location; ?></p>
+        <?php endif; ?>
+
+        </li>
+
+
+
+    <?php endwhile; endif; ?>
+
+    </ul><!-- front-events -->
+  
+    <div id="front-gallery">
+      <h2>Recent Pictures</h2>
+        <?php echo do_shortcode( '[recent max=6 order_by="alttext"]' ); ?>
+    </div><!-- front-gallery -->
+
     </div><!-- front-sidebar -->
 
     <div id="front-content">
+      <ul id="front-news">
+        <h2>News and Announcements</h2>
+
+        <?php
+          $args = array(
+              'post_type' => 'post',
+              'post_status' => 'publish',
+              'posts_per_page' => 3
+          );
+
+          $query = new WP_Query($args); 
+
+          while($query->have_posts()) : $query->the_post(); 
+        ?>
+
+        <li class="clearfix">
+
+          <?php 
+              $day = get_the_date('d');
+              $month = get_the_date('M'); 
+              $year  = get_the_date('Y');
+          ?>
+
+          <div class="date">
+            <h3><?php echo $month; ?></h3>
+            <h4><?php echo $day; ?></h4>
+            <!-- <p><?php echo $year; ?></p> -->
+          </div>
+
+          <?php if(has_post_thumbnail()) : ?>
+
+              <?php the_post_thumbnail(array('72', '72')); ?>
+
+          <?php endif; ?>
+          
+          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          <?php ks_excerpt(); ?>
+
+        </li>
+
+      <?php endwhile; ?>
+      </ul><!-- front-news -->
+
         <h2>welcome to the christian fellowship international</h2>
         <p>It is not by accident that God has directed you to this website. Pilgrims Community Church under the cutting edge and dynamic leadership of our visionary founding Pastor, Dr Japhat Ndemera is a holistic, life changing, bible based, coaching clinic and fountain of eternal life. We are a church that is planted, positioned and prepared for, "Empowering You For the Journey", through this life into eternity.
  

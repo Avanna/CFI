@@ -165,6 +165,8 @@ background: url(<?php echo $footerbg[4] ?>) <?php echo $footerbg[1] ?> <?php ech
      </style>
      
          <?php } ?>
+
+    <!-- google fonts -->
      
 </head>
 
