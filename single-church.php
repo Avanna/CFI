@@ -1,229 +1,97 @@
 <?php get_header(); ?>
 
-   <?php 
-
-
-$bannerimg = get_post_meta(get_the_ID(), 'bannerimg', true);
-$sidebar = get_post_meta(get_the_ID(), 'sidebar', true);
-$wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
-
-?>
-       <?php
-        if (have_posts ()) {
-
-            while (have_posts ()) {
-
-                (the_post());
-        ?>
-
-
+    <?php 
+        $bannerimg = get_post_meta(get_the_ID(), 'bannerimg', true);
+        $sidebar = get_post_meta(get_the_ID(), 'sidebar', true);
+        $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
+    ?>
+       
     <div class="topModule clearfix">
-
         
-              <?php if( $bannerimg) { ?>
+            <?php if( $bannerimg) : ?>
                                              
-                         <div class="container headerImg">
-            
-            <img alt="" src="<?php echo $bannerimg; ?>" />
-                
-        </div>
+                <div class="container headerImg">            
+                    <img alt="" src="<?php echo $bannerimg; ?>" />              
+                </div>
 
-                                <?php } ?>
+            <?php endif ?>
                         
-       
-                        
-       
-     
             <div class="container pageTitle">
             
                 <div class="ten columns">
-                    
-                      <div class="postEventsDate">
-                                     
-                                     <span class="month"><?php the_time('M') ?></span>
-                                     <span class="day"><?php the_time('jS') ?></span>
-                                
-                                 </div>
-                                 
-                                 <div class="postListTitle">
-                                     
-                                     <h1><a href="#"><?php the_title(); ?></a></h1>
-                                     <span><?php _e('By', 'localization'); ?><?php the_author(); ?> | <?php _e('In', 'localization'); ?> <?php the_category(', ');?> </span>
-   
-                                     
-                                 </div>
-                                       
-                    
+                    <div class="postListTitle">    
+                        <h1><a href="#"><?php the_title(); ?></a></h1>
+                    </div>        
                 </div>
                 
-                <div class="six columns">
-                    
-                    <?php get_search_form(); ?>
-                    
-                                        
+                <div class="six columns">                   
+                    <?php get_search_form(); ?>                                    
                 </div>
             
-        </div>
-             <div class="container pageContent clearfix">
-            
-                 
-                 <?php if ($sidebar == 'yes') { ?>
-                 
-                 <div class="twelve columns wsidebar">
-                     
-                     <?php } else { ?>
-                 
-                 <div class="sixteen columns">
-                     
-                         <?php } ?>
-                     
-                                
-
-
-<?php the_content(); ?>
-
-                        <?php comments_template(); ?>    
-
-<?php }
-        } else { ?>
-
-            <div class="post box">
-                <h3><?php _e('There is not post available.', 'localization'); ?></h3>
-
             </div>
 
-<?php } ?>
-                     
-                 </div>
-                     
-                        <?php if ($sidebar == 'yes') { ?>
-                 
-                 <div class="four columns postSidebar">
-        
-          <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Single Blog Post")) ; ?>
-        
-    </div>  
-                     <?php } ?>
-                  
-            
-        </div>
-          
-    </div>
-  
-    </div>
-             
-  <?php if ( $wmodulepage == 'yes') { ?>
-    
+            <div class="container pageContent clearfix"> 
 
-        <?php if (ot_get_option('wmoduletop') == 'yes') {  ?>
-
-<div class="infoModule clearfix">
-        
-        <div class="container">
-            
-            
-                <?php if (ot_get_option('wmoduleevent') == 'yes') { ?>
-            
-            
                 <?php
-global $paged;
+                    if (have_posts()) : 
+                    while (have_posts()) : the_post();
+                ?>
 
+                <?php 
+                    $street_add = get_post_meta($post->ID, 'street_add', true);
+                    $city = get_post_meta($post->ID, 'city', true);
+                    $phone = get_post_meta($post->ID, 'phone', true);
+                    $state = get_post_meta($post->ID, 'state', true);
+                    $zipcode = get_post_meta($post->ID, 'zipcode', true);
+                    $pastor = get_post_meta( $post->ID, 'pastor', true);
+                ?>   
 
-$arguments = array(
-    'post_type' => 'events',
-    'post_status' => 'publish',
-    'paged' => $paged,
-    'showposts' => 1
-);
+                <div id="church-content">
+                    <h3><?php the_title(); ?></h3>
 
-$events_query = new WP_Query($arguments);
+                    <p><strong>About The Church</strong></p>
+                    <?php the_content(); ?>
+                    <?php // comments_template(); ?>
+                </div><!-- church-content -->
 
-dd_set_query($events_query);
+                <div id="church-meta">
 
-?>
-                     
-                       <?php if ($events_query->have_posts()) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
-            
-            <div class="eight columns nextEvent clearfix">
-                
-                   <?php 
+                    <h3>address</h3>
 
-$thumbimg = get_post_meta(get_the_ID(), 'thumbimg', true);
-$facebookurl = get_post_meta(get_the_ID(), 'facebookurl', true);
-
-
-?>
-                
-                        <?php if( $thumbimg ) { ?>
-    
-                
-                 <div class="nextEventThumb">
-                            
-                            <a href="<?php the_permalink(); ?>"><img alt="" src="<?php echo $thumbimg; ?>" /></a>
-                            
-                        </div>
-                
-                        <?php } ?>
-                
-                <div class="nextEventInfo">
+                    <address id="church-address">
+                        <?php if($street_add) : ?>
+                            <p><?php echo $street_add; ?></p>
+                        <?php endif; ?>
+                        <?php if($city) : ?>
+                            <p><?php echo $city; ?></p>
+                        <?php endif; ?>
+                        <?php if($state) : ?>
+                            <p><?php echo $state; ?></p>
+                        <?php endif; ?>
+                        <?php if($zipcode) : ?>
+                            <p><?php echo $zipcode; ?></p>
+                        <?php endif; ?>
+                    </address>
                     
-                    <h3>NEXT EVENT :</h3>
-                    <h4><?php the_title(); ?></h4>
-                  
+                    <h3>contact info</h3>
+
+                    <?php if($zipcode) : ?>
+                        <p><?php echo $phone; ?></p>
+                    <?php endif; ?>
                     
-                            <a class="button-small rounded3 brown" href="<?php the_permalink(); ?>"><?php _e('CONTINUE READING', 'localization'); ?></a>
-                                 
-                                    <?php if( $facebookurl ) { ?>
+                    <?php if($pastor) : ?>
+                        <h3>Pastor: <?php echo $pastor; ?></h3>
+
+                        <?php if(has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('thumbnail'); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
                         
-                                 <span class="or">OR</span>
-                                 <a class="button-small facebookBtn rounded3 blue" target="blank" href="<?php echo $facebookurl; ?>">SEE FACEBOOK PAGE</a>
-                                 
-                  
-                        
-                                    <?php } ?>
-                        
-                     
-                                 
-                    
-                </div>
+                </div><!-- church-meta -->                      
                 
-            </div>
-            
-            
-            
-                <?php endwhile; ?>
-                    
-                
+                <?php endwhile; endif; ?>
+            </div><!-- container -->   
 
-<?php endif; ?>
-            
-                    <?php } ?>
-                     
-            
-            <div class="eight columns churchInfo">
-                
-                        <?php echo ot_get_option('wmoduleright') ?>
-                
-            </div>
-            
-        </div>
-        
-    </div>
-
-                <?php } ?>
-
-<div class="postsModule clearfix">
-                      
-        <div class="container postsModuleLists">
-            
-        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Widgetized Module")) ; ?>
-                           
-                
-        </div>     
-        
-    </div>
-
-    
-            <?php } ?>
-
+        </div><!-- top-module -->
+             
 <?php get_footer(); ?>

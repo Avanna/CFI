@@ -17,7 +17,7 @@ function create_churches() {
     'parent_item_colon' => ''
   );
 
-  $supports = array('title', 'editor','revisions', 'excerpt');
+  $supports = array('title', 'editor','revisions', 'excerpt', 'thumbnail');
 
   register_post_type( 'church',
     array(
@@ -65,10 +65,10 @@ function church_meta_fields() {
 		$phone = get_post_meta($_REQUEST['post'],'phone',true);
 	}
 	
-	// $latlong = '';
-	// if ( isset($_REQUEST['post']) ) {
-	// 	$latlong = get_post_meta($_REQUEST['post'],'latlong',true);
-	// }
+	$pastor = '';
+	if ( isset($_REQUEST['post']) ) {
+		$pastor = get_post_meta($_REQUEST['post'],'pastor',true);
+	}
 	
 ?>
 <div id="pharmacy_information">
@@ -98,10 +98,10 @@ function church_meta_fields() {
 <input id="zipcode" class="widefat" name="zipcode" value="<?php echo esc_attr($zipcode); ?>" type="text">
 </div>
 
-<!-- <div>
-<label for="latlong">Latitude</label>
-<input id="latlong" class="widefat" name="latlong" value="<?php echo esc_attr($latlong); ?>" type="text">
-</div> -->
+<div>
+<label for="pastor">Pastor</label>
+<input id="pastor" class="widefat" name="pastor" value="<?php echo esc_attr($pastor); ?>" type="text">
+</div>
 
 </div>
 
@@ -142,10 +142,10 @@ function save_church_info($postID){
                                 $_POST['zipcode']);
         }
 
-		// if ( isset($_POST['latlong']) ) {
-  //           update_post_meta($postID,'latlong',
-  //                               $_POST['latlong']);
-  //       }
+		if ( isset($_POST['pastor']) ) {
+            update_post_meta($postID,'pastor',
+                                $_POST['pastor']);
+        }
 
     }
 }
