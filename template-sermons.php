@@ -64,7 +64,7 @@ $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
         </div>
              <div class="container pageContent clearfix">
             
-                 <ul class="postList clearfix">
+                 <ul class="postList sermon-list clearfix">
                      
                     <?php
 global $paged;
@@ -100,17 +100,17 @@ $sermonogg = get_post_meta(get_the_ID(), 'sermonogg', true);
        
     <?php if( $thumbimg) { ?>
     
-      <div class="postListThumb four columns">
+      <div class="postListThumb">
                              
-                             <a href="<?php the_permalink(); ?>"><img alt="" src="<?php echo $thumbimg; ?>" /></a>
+        <a href="<?php the_permalink(); ?>"><img alt="" src="<?php echo $thumbimg; ?>" /></a>
                              
-                         </div>
+    </div>
     
 
 
-      <div class="postListDetails twelve columns">
+      <div class="postListDetails">
           
-              <?php } else { ?> <div class="postListDetails sixteen columns"> <?php } ?>
+              <?php } else { ?> <div class="postListDetails"> <?php } ?>
 
                              <div class="postListMeta">
 

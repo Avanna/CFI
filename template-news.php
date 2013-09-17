@@ -64,7 +64,7 @@ $pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
         </div>
              <div class="container pageContent clearfix">
             
-                 <ul class="postList clearfix">
+                 <ul class="postList news-list clearfix">
                      
                      
                         <?php
@@ -109,9 +109,9 @@ $thumbimg = get_post_meta(get_the_ID(), 'thumbimg', true);
     
 
 
-      <div class="postListDetails twelve columns">
+      <div class="postListDetails">
           
-              <?php } else { ?> <div class="postListDetails sixteen columns"> <?php } ?>
+              <?php } else { ?> <div class="postListDetails"> <?php } ?>
 
                              <div class="postListMeta">
 

@@ -44,12 +44,23 @@
                     $state = get_post_meta($post->ID, 'state', true);
                     $zipcode = get_post_meta($post->ID, 'zipcode', true);
                     $pastor = get_post_meta( $post->ID, 'pastor', true);
+                    $scripture = get_post_meta( $post->ID, 'scripture', true);
+                    $website = get_post_meta( $post->ID, 'website', true);
                 ?>   
 
                 <div id="church-content">
-                    <h3><?php the_title(); ?></h3>
+                    <h2><?php the_title(); ?></h2>
+
+                    <p><strong>Scripture</strong></p>
+                        
+                    <?php if($scripture) : ?>
+                        <blockquote>
+                            <?php echo $scripture; ?>
+                        </blockquote>  
+                    <?php endif; ?>
 
                     <p><strong>About The Church</strong></p>
+
                     <?php the_content(); ?>
                     <?php // comments_template(); ?>
                 </div><!-- church-content -->
@@ -77,6 +88,7 @@
 
                     <?php if($zipcode) : ?>
                         <p><?php echo $phone; ?></p>
+                        <p><?php echo $website; ?></p>
                     <?php endif; ?>
                     
                     <?php if($pastor) : ?>

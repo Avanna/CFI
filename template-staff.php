@@ -1,22 +1,21 @@
-<?php /*
-  Template Name: Member Churches
- */ ?>
+<?php 
+/*
+  Template Name: Staff Members
+*/
+
+?>
 
 <?php get_header(); ?>
 
-   <?php 
-
-
-$bannerimg = get_post_meta(get_the_ID(), 'bannerimg', true);
-$wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
-$pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
-
+<?php 
+    $bannerimg = get_post_meta(get_the_ID(), 'bannerimg', true);
+    $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
+    $pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
 ?>
 
 
     <div class="topModule clearfix">
-
-        <?php get_template_part( 'content', 'page-top' ); ?>
+            <?php get_template_part( 'content', 'page-top' ); ?>
         
             <?php if( $bannerimg) { ?>
                                              
@@ -38,62 +37,56 @@ $pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
                         
              <div class="container pageContent clearfix">
             
-                 <ul id="churches" class="clearfix">
+                 <ul id="staff" class="clearfix">
  
                     <?php
                         global $paged;
 
                         $args = array(
-                            'post_type' => 'church',
-                            'post_status' => 'publish',
-                            'paged' => $paged
+                            'post_type' => 'post',
+                            'category_name' => 'staff',
+                            'paged' => $paged,
+                            'order' => 'ASC'
                         );
 
-                        $churches = new WP_Query($args);
+                        $staff = new WP_Query($args);
                     ?>
                                 
-                    <?php if ($churches->have_posts()) : while ($churches->have_posts()) : $churches->the_post(); ?>
+                    <?php if ($staff->have_posts()) : while ($staff->have_posts()) : $staff->the_post(); ?>
   
-                    <li class="church clearfix">
+                    <li class="staff-member clearfix">
 
                         <?php 
-                            $thumbimg = get_post_meta(get_the_ID(), 'thumbimg', true);
-                            $city = get_post_meta(get_the_ID(), 'city', true);
-                            $state = get_post_meta(get_the_ID(), 'state', true);
-
-                            $location = $city.', '.$state;
-                        ?>
-
-                        <?php if( $thumbimg) : ?>
-                        
-                            <div class="postListThumb">  
-                                <a href="<?php the_permalink(); ?>"><img alt="" src="<?php echo $thumbimg; ?>" /></a>
-                            </div>
-                            
-                        <?php endif; ?>
-                        
+                            $position = get_post_meta(get_the_ID(), 'staff_member_position', true);
+                        ?>                    
                     
                         <div class="postListDetails">                           
 
                              <div class="postListMeta">
-                            
 
-                                 
-                             <div class="postListTitle">                                
-                                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                                <p class="orange-text"><?php echo $location; ?></p>   
-                             </div>
+                            <?php if(has_post_thumbnail()) : ?>
+                            
+                                <div class="rounded-thumbnail">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail(); ?>
+                                    </a>
+                                </div>
+
+                            <?php endif; ?>
+                                
+                                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <p class="orange-text"><?php echo $position; ?></p>  
                             
                              </div>
                              
-                             <div class="postListExcerpt">
+                             <!-- <div class="postListExcerpt">
                                  
                                 <?php the_excerpt(); ?>
                                  <a class="button-small rounded3 brown" href="<?php the_permalink(); ?>">
                                     <?php _e('CONTINUE READING', 'localization'); ?>
                                 </a>
                                  
-                             </div>
+                             </div> -->
                              
                          </div>
                     </li>

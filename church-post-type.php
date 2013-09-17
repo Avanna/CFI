@@ -69,6 +69,16 @@ function church_meta_fields() {
 	if ( isset($_REQUEST['post']) ) {
 		$pastor = get_post_meta($_REQUEST['post'],'pastor',true);
 	}
+
+  $scripture = '';
+  if ( isset($_REQUEST['post']) ) {
+    $scripture = get_post_meta($_REQUEST['post'],'scripture',true);
+  }
+
+  $website = '';
+  if ( isset($_REQUEST['post']) ) {
+    $website = get_post_meta($_REQUEST['post'],'website',true);
+  }
 	
 ?>
 <div id="pharmacy_information">
@@ -103,6 +113,17 @@ function church_meta_fields() {
 <input id="pastor" class="widefat" name="pastor" value="<?php echo esc_attr($pastor); ?>" type="text">
 </div>
 
+<div>
+<label for="website">Website</label>
+<input id="website" class="widefat" name="website" value="<?php echo esc_attr($website); ?>" type="text">
+</div>
+
+<div>
+<label for="scripture">Scripture</label>
+<textarea id="scripture" class="widefat" name="scripture" type="text" ><?php echo esc_attr($scripture); ?></textarea>
+</div>
+
+
 </div>
 
 <?php
@@ -114,37 +135,49 @@ function save_church_info($postID){
     global $post;  
     
     if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ){ 
-		return $postID;
-	}
+		  return $postID;
+	 }
 	
 	if ( is_admin() ) {
+
         if ( isset($_POST['street_add']) ) {
             update_post_meta($postID,'street_add',
                          $_POST['street_add']);
         }
 		 
-		 if ( isset($_POST['state']) ) {
+		    if ( isset($_POST['state']) ) {
             update_post_meta($postID,'state',
                                 $_POST['state']);
         }
-		 if ( isset($_POST['city']) ) {
+
+		    if ( isset($_POST['city']) ) {
             update_post_meta($postID,'city',
                                 $_POST['city']);
         }	
 
-		if ( isset($_POST['phone']) ) {
+		    if ( isset($_POST['phone']) ) {
             update_post_meta($postID,'phone',
                                 $_POST['phone']);
         }
 		
-		if ( isset($_POST['zipcode']) ) {
+		    if ( isset($_POST['zipcode']) ) {
             update_post_meta($postID,'zipcode',
                                 $_POST['zipcode']);
         }
 
-		if ( isset($_POST['pastor']) ) {
+		    if ( isset($_POST['pastor']) ) {
             update_post_meta($postID,'pastor',
                                 $_POST['pastor']);
+        }
+
+        if ( isset($_POST['scripture']) ) {
+            update_post_meta($postID,'scripture',
+                                $_POST['scripture']);
+        }
+
+        if ( isset($_POST['website']) ) {
+            update_post_meta($postID,'website',
+                                $_POST['website']);
         }
 
     }

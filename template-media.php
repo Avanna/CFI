@@ -6,7 +6,6 @@
 
    <?php 
 
-
 $bannerimg = get_post_meta(get_the_ID(), 'bannerimg', true);
 $pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
 $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
@@ -25,10 +24,7 @@ $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
                 
         </div>
 
-                                <?php } ?>
-                        
-       
-       
+                                <?php } ?>      
      
               <div class="container pageTitle">
             
@@ -65,7 +61,7 @@ $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
         </div>
              <div class="container pageContent clearfix">
             
-                 <ul class="postList clearfix">
+                 <ul class="postList media-list clearfix">
                      
                     <?php
 global $paged;
@@ -100,7 +96,7 @@ $imggallery = get_post_meta(get_the_ID(), 'imggallery', true);
        
     <?php if( $thumbimg) { ?>
     
-      <div class="postListThumb four columns">
+      <div class="postListThumb">
                              
                              <a href="<?php the_permalink(); ?>"><img alt="" src="<?php echo $thumbimg; ?>" /></a>
                              
@@ -108,9 +104,9 @@ $imggallery = get_post_meta(get_the_ID(), 'imggallery', true);
     
 
 
-      <div class="postListDetails twelve columns">
+      <div class="postListDetails">
           
-              <?php } else { ?> <div class="postListDetails sixteen columns"> <?php } ?>
+              <?php } else { ?> <div class="postListDetails"> <?php } ?>
 
                              <div class="postListMeta">
 

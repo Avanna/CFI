@@ -24,15 +24,14 @@ h1, h2, h3, h4, h5 {
 }
 
 h2, h3 {
-    color:#362B23;
+    color:#f35334;
 }
 
 h2 {
-    font-family:'oswald', 'helvetica neue', Helvetica, Arial, sans-serif;
-    font-size:18px;  
+    font-family: 'oswald', 'helvetica neue', Helvetica, Arial, sans-serif;
+    font-size:22px;  
     font-weight:400;
     margin:0 0 12px 0;
-    /*text-transform: uppercase;*/
 }
 
 h3 {
@@ -56,18 +55,12 @@ li p {
 .rounded-thumbnail {
     width:140px;
     height:140px;
-    /*padding:8px;*/
-    border:7px #ddd solid;
+    border:7px #fff solid;
     -webkit-border-radius: 300px;
     -moz-border-radius: 300px;
     border-radius: 300px;
     overflow:hidden;
-    margin:0 auto 18px auto;
-}
-
-.rounded-thumbnail img {
-    width:100%;
-    height:140px;
+    margin:0 auto;
 }
 
 .clear {
@@ -90,24 +83,24 @@ li p {
     /*text-transform: uppercase;*/
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
-    /*font-size: 29px;
+    font-size: 29px;
     line-height: 42px;
     margin: 0;
     margin-bottom: 20px;
-    word-spacing: 0.2em;*/
+    word-spacing: 0.2em;
 /*    border-bottom: 6px #937d73 solid;*/
 }
 .pageContent h1 {
-    font-size: 18px !important;
-    /*line-height: 50px !important;*/
+    font-size: 40px !important;
+    line-height: 50px !important;
 }
 .pageContent h2 {
-   /* font-size: 18px !important;
-    line-height: 43px !important;*/
+    font-size: 29px !important;
+    line-height: 43px !important;
 }
 .pageContent h3 {
-    /*font-size: 22px !important;
-    line-height: 33px !important;*/
+    font-size: 22px !important;
+    line-height: 33px !important;
 }
 .pageContent h4, .widget h4 {
     font-size: 18px !important;
@@ -141,11 +134,11 @@ li p {
     color: red;
 }
 body {
-    font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
+    font-family: georgia;
     background:#F7F5E7  url(images/light-denim.png);
     font-size: 0.8125em;
-    color:#333;
-    line-height:1.6;
+    color:#555;
+    line-height:1.5;
 }
 
 header {
@@ -154,28 +147,6 @@ header {
     position: relative;
     /*border-bottom: 3px #222 double;*/
     background: #362B23 /*url(images/dashed_bg.jpg) repeat-x bottom*/;
-    -moz-box-shadow: 0px 1px 2px #222;
-    -webkit-box-shadow: 0px 1px 2px #222;
-    box-shadow: 0px 1px 2px #222;
-    filter: progid:DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#222');
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 180, Color = '#222')";
-
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#5f4a3a', endColorstr = '#362b23');
-    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-    /*Element must have a height (not auto)*/
-    /*All filters must be placed together*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#5f4a3a', endColorstr = '#362b23')";
-    /*Element must have a height (not auto)*/
-    /*All filters must be placed together*/
-    background-image: -moz-linear-gradient(top, #5f4a3a, #362b23);
-    background-image: -ms-linear-gradient(top, #5f4a3a, #362b23);
-    background-image: -o-linear-gradient(top, #5f4a3a, #362b23);
-    background-image: -webkit-gradient(linear, center top, center bottom, from(#5f4a3a), to(#362b23));
-    background-image: -webkit-linear-gradient(top, #5f4a3a, #362b23);
-    background-image: linear-gradient(top, #5f4a3a, #362b23);
-    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
-
-    z-index:999;
 }
 .navBg {
     position: absolute;
@@ -201,13 +172,9 @@ header {
     color:#fff;
 }
 
-
 .mainNav {
     float: right;
-    /*background:#7cb0b4;*/
-    /*padding:0 18px 0 0;*/
-    /*margin-top: 30px;*/
-    /*border-radius:5px;*/
+    /*margin-top: 25px;*/
 }
 .mainNav ul li {
     font-size: 14px;
@@ -223,8 +190,8 @@ header {
 }
 
 .mainNav .current_page_item a, .mainNav ul li a:hover {
-    /*background:#00BEBE;*/
-    color: #f35334;
+    background:#00BEBE;
+    color: #000;
 }
 .mainNav ul li a {
     color: #fff;
@@ -233,47 +200,6 @@ header {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
 }
-
-#page-top {
-    padding:0 5%;
-    height:60px;
-    background:#7cb0b4;
-     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e');
-    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-    /*Element must have a height (not auto)*/
-    /*All filters must be placed together*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e')";
-    /*Element must have a height (not auto)*/
-    /*All filters must be placed together*/
-    background-image: -moz-linear-gradient(top, #7cb0b4, #6d9b9e);
-    background-image: -ms-linear-gradient(top, #7cb0b4, #6d9b9e);
-    background-image: -o-linear-gradient(top, #7cb0b4, #6d9b9e);
-    background-image: -webkit-gradient(linear, center top, center bottom, from(#7cb0b4), to(#6d9b9e));
-    background-image: -webkit-linear-gradient(top, #7cb0b4, #6d9b9e);
-    background-image: linear-gradient(top, #7cb0b4, #6d9b9e);
-    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
-
-    border-bottom: 2px #456b6e solid;
-}
-
-#page-nav {
-    
-}
-
-#page-nav li {
-    font-size:13px;
-    float:left;
-    margin:0 24px 0 0;
-    color:#fff;
-    line-height: 60px;
-    font-weight:bold;
-    text-transform: capitalize;
-}
-
-#page-nav li a {
-    color:#fff;
-}
-
 nav select {
     width: 100%;
     z-index: 5;
@@ -326,11 +252,9 @@ line-height: 28px;
     padding:0;
     position: relative;
     display: none;
-    -moz-box-shadow: 1px 1px 2px #222;
-    -webkit-box-shadow: 1px 1px 2px #222;
-    box-shadow: 1px 1px 2px #222;
-    filter: progid:DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#222');
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 180, Color = '#222')";
+    /*-moz-box-shadow: 1px 0px 0px 2px #999;
+    -webkit-box-shadow: 1px 0px 0px 2px #999;
+    box-shadow: 1px 0px 0px 2px #999;*/
 }
 
 .headerImg {
@@ -427,18 +351,7 @@ line-height: 28px;
     float:left;
     width:33%;
     min-height:400px;
-    background:#7cb0b4 /*url(images/page_bg.jpg)*/;
-}
-
-#front-sidebar h2, #front-sidebar h3 {
-    color:#362B23;
-}
-
-#front-sidebar h2 {
-    font-size: 16px;
-    background:#fff;
-    text-align: center;
-    border-bottom: 4px #33575a double;
+    background:#EAE8E0 /*url(images/page_bg.jpg)*/;
 }
 
 #front-sermons {
@@ -467,35 +380,29 @@ line-height: 28px;
     width:80%;
     padding:24px 0;
     margin:0 auto;
-    background:#8dbdc1 /*url(images/page_bg.jpg)*/;
+    background:#fff /*url(images/page_bg.jpg)*/;
     text-align: center;
-    border-radius: 3px;
-     border-right: 1px #52888c solid;
-    border-bottom: 1px #52888c solid;
+    border-radius: 5px;
+     border-right: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
 }
 
-#pastor p a {
+#pastor h2 {
     display:inline-block;
-    font-size:14px;
-    font-weight: bold;
-    padding:6px 18px;
+    padding:0px 18px;
     margin:12px 0 6px;
-    background: #f35334;
-    /*border:1px #ddd solid;*/
-    /*-webkit-border-radius: 6px;
-    -moz-border-radius: 6px;*/
-    border-radius: 3px;
-    border-bottom: 3px #923726 solid;
-    text-transform: capitalize;
-    color:#fff;
+    background: #fff;
+    border:1px #ddd solid;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
 
 #front-content {
     float:right;
-    width:57%;
+    width:53%;
     min-height:400px;
-    padding:4% 5%;
-    background:#f8f8f8;
+    padding:7%;
 }
 
 #front-events {
@@ -508,12 +415,10 @@ line-height: 28px;
 #front-events li {
     padding:18px 18px 9px;
     margin:0 0 6px 0;
-    /*border-right: 1px #ddd solid;
-    border-bottom: 1px #ddd solid;*/
-    background: #8dbdc1;
-    border-radius: 3px;
-    border-right: 1px #52888c solid;
-    border-bottom: 1px #52888c solid;
+    border-right: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
+    background: #fff;
+    border-radius: 6px;
 }
 
 #front-events li img {
@@ -526,17 +431,15 @@ line-height: 28px;
 #front-events h3 {
     line-height: 1.2;
     margin:0 0 9px 0;
-    font-size:14px;
 }
 
 #front-events p {
     line-height: 1.2;
     margin:0 0 6px 0;
-    color:#333;
 }
 
-#front-events h3 a {
-    color:#222;
+#front-events h3 {
+    font-size:14px;
 }
 
 #front-news {
@@ -546,13 +449,10 @@ line-height: 28px;
 }
 
 #front-news li {
-    padding:18px;
-    margin:0 0 12px 0;
+    padding:0;
+    margin:0 0 18px 0;
     position:relative;
-    background:#fff;
-    border-right: 1px #ddd solid;
-    border-bottom: 1px #ddd solid;
-    border-radius: 3px;
+    border-bottom: 1px #ddd dotted;
 }
 
 #front-news .date {
@@ -561,7 +461,7 @@ line-height: 28px;
     padding:0 12px;
     margin:0 0 6px 0;
     position:absolute;
-    right:-14%;
+    right:-18%;
     background:#362B23;
     /*border: 1px #ddd solid;*/
     text-align: center;
@@ -584,8 +484,8 @@ line-height: 28px;
     font-size:16px;
     padding:0;
     margin:0;
-    background:#f35334;
-    color:#fff;
+    background:#FACE01;
+    color:#222;
     line-height: 32px;
 }
 
@@ -601,9 +501,9 @@ line-height: 28px;
 }
 
 #front-gallery {
-    padding:0 9% 24px;
-    /*border-top:1px #ddd dotted;
-    border-bottom:1px #ddd dotted;*/
+    padding:24px 9%;
+    border-top:1px #ddd dotted;
+    border-bottom:1px #ddd dotted;
 }
 
 #front-gallery .ngg-gallery-thumbnail-box {
@@ -611,10 +511,10 @@ line-height: 28px;
 }
 
 #front-gallery .ngg-gallery-thumbnail img {
-    /*border:5px #ddd solid;*/
-    /*border-bottom:1px #ddd solid;
-    border-right:1px #ddd solid;*/
-    /*padding:5%;*/
+    border:1px #f0f0f0 solid;
+    border-bottom:1px #ddd solid;
+    border-right:1px #ddd solid;
+    padding:5%;
     background:#fff;
 }
 
@@ -643,22 +543,7 @@ box-shadow: 0px 0px 10px #999;
 .pageTitle {
      padding: 35px 35px 33px 35px;
      position: relative;
-     background:#7cb0b4;
-     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e');
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e')";
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: -ms-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: -o-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#7cb0b4), to(#6d9b9e));
-background-image: -webkit-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: linear-gradient(top, #7cb0b4, #6d9b9e);
-/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
-
+     background:#B7D3D5;
 }
 
 .pageTitle .postListTitle h1 a {
@@ -695,7 +580,7 @@ background-image: linear-gradient(top, #7cb0b4, #6d9b9e);
     line-height: 28px;
 }
 .topModuleDetails, .pageContent {
-    background:#f8f8f8;
+    background:#fff;
      padding: 40px 35px 20px 35px;
      -webkit-border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
@@ -993,7 +878,7 @@ border-radius: 0 0 3px 3px;
 }
 
 .postListTitle h1 {
-    font-size: 18px !important;
+    font-size: 22px !important;
     word-spacing: 0.1em !important;
     /*text-transform: none !important;*/
 }
@@ -1392,39 +1277,27 @@ float: right;
 
 #church-content {
     float:left;
-    width:54%;
-    padding:5%;
+    width:64%;
+    padding:0;
     background:#fff;
-
 }
 
 #church-meta {
     float:right;
     width:29%;
     padding:3%;
-    background:#7cb0b4;
+    background: url(images/page_bg.jpg);
 }
 
 #church-meta h3 {
     font-size:16px !important;
-    font-size: 16px;
-    background: #fff;
-    text-align: center;
-    border-bottom: 4px #33575a double;
-}
-
-#church-meta p {
-    color:#222;
+    padding:3px 18px;
+    background:#fff;
+    border-bottom: 1px #ddd solid;
 }
 
 #church-address {
-    padding:6%;
     margin:0 0 36px 0;
-    background: #8dbdc1 /*url(images/page_bg.jpg)*/;
-    /*text-align: center;*/
-    border-radius: 3px;
-    border-right: 1px #52888c solid;
-    border-bottom: 1px #52888c solid;
 }
 
 #church-address p {
@@ -1433,23 +1306,21 @@ float: right;
 }
 
 #churches {
-    /*padding:5%;*/
-    /*background:#F8F4EB;*/
+    padding:5%;
+    background:#F8F4EB;
 }
 
-.church {
-    /*float:left;*/
-    width:90%;
-    padding:3% 5%;
-    margin:0 5% 12px 0;
+.church{
+    float:left;
+    width:41%;
+    padding:3%;
+    margin:0 5% 0 0;
     background:#fff;
-    border-right:1px #ddd solid;
-    border-bottom:1px #ddd solid;
-    border-radius: 3px;
+    border:1px #ddd solid;
 }
 
-.church .postListMeta {
-    margin-bottom: 0;
+.church:nth-of-type(2n + 2) {
+    margin-right:0;
 }
 
 /* Style for the contact form and status messages */
@@ -1461,27 +1332,6 @@ float: right;
 
 
 /* The form dimensions */
-
-/* media page */
-
-.media-list li, .sermon-list li, .news-list li {
-    padding:5% 5% 3%;
-    background: #fff;
-    border-right: 1px #ddd solid;
-    margin:0 0 12px 0;
-}
-
-
-
-.sermon-list .postListThumb, .news-list li .postListThumb  {
-    float:left;
-    width:25%;
-    margin:0 3% 3% 0;
-}
-
-.sermon-list .postListMeta, .news-list .postListMeta {
-    width:60%;
-}
 
 
 
@@ -1517,70 +1367,6 @@ float: right;
   text-align: center;
   margin: 0;
   padding: 0;
-}
-
-/* pastor's profile */
-
-.profile-top {
-    height:500px;
-    padding:0 0 48px 0;
-     z-index:998;
-     background:#8b482b url(images/pastor-top.png) no-repeat;
-}
-
-.profile-info {
-    width:64%;
-    padding:5%;
-    margin:-200px auto 0;
-    background: rgba(255, 255, 255, 0.8);
-    z-index:999;
-}
-
-#pastor-profile {
-    background:#8b482b /*url(images/pastor-profile.png) no-repeat*/;
-    padding:0 0 36px 0;
-}
-
-#profile-left {
-    float:left;
-    width:30%;
-    display: none;
-}
-
-.profile-thumb {
-    width:;
-}
-
-#profile-right {
-    float:right;
-    width:56%;
-    padding:5%;
-    background:#fff;
-    background: rgba(255, 255, 255, 0.8);
-}
-
-
-/* contact */
-
-#contact {
-    width:60%;
-    padding:5%;
-    margin:48px auto 48px auto;
-    background: #f8f8f8;
-}
-
-.wpcf7 {
-    padding:5%;
-}
-
-.wpcf7 input[type=submit] {
-    font-size:18px;
-    background:#f35334;
-    padding:9px 18px;
-    border:none;
-    color:#fff;
-    text-transform: capitalize;
-    margin:0 0 48px 0;
 }
 
 
@@ -1798,25 +1584,20 @@ font-size: 11px;
 /*==|== staff page ========================================================*/
 
 #staff {
-    /*padding:5%;*/
-    /*background: #F8F4EB;*/
+    padding:5%;
+    background: #F8F4EB;
 }
 
 .staff-member {
     float:left;
-    width:25%;
+    width:42%;
     padding:3%;
     margin:0 3% 3% 0;
     background: #fff;
-    border-right:1px #ddd solid;
-    border-bottom:1px #ddd solid;
+    border:1px #ddd solid;
 }
 
-.staff-member h2, .staff-member {
-    text-align: center;
-}
-
-.staff-member:nth-child(3) {
+.staff-member:nth-child(2) {
     margin-right: 0;
 }
 

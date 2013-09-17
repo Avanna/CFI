@@ -1,6 +1,6 @@
 <?php
 
-include('church-post-type.php');
+include('church-post-type.php');      
 
 /*
 * Include OptionTree plugin for theme options.

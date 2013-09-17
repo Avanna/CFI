@@ -43,12 +43,14 @@
 
  </div><!-- container slider -->
 
- <div class="tagline">
+ <!-- <div class="tagline">
 
       <h1><?php echo ot_get_option('tagline') ?></h1>
       <h2><?php echo ot_get_option('taglinedescription') ?></h2>
 
-  </div>
+  </div> -->
+
+  
 
  <!--  <div class="container topModuleDetails clearfix">
 
@@ -68,16 +70,16 @@
 
 <div id="front-content-wrapper" class="clearfix">
     <div id="front-sidebar">
-      <div id="front-sermons">
+      <!-- <div id="front-sermons">
         <h2><a href="<?php echo home_url( '/sermons' ); ?>">listen to sermons</a></h2>
-      </div><!-- front-sermons -->
+      </div> --><!-- front-sermons -->
 
       <div id="pastor">
           <div class="rounded-thumbnail">
             <img src="<?php echo get_template_directory_uri(); ?>/images/pastor.jpg" alt="our pastor">
           </div>
-          <h2>our pastor</h2>
           <h3>Pastor Ndemera</h3>
+          <p><a href="<?php echo home_url( '/sermons' ); ?>" alt="" >visit the pastor's corner</a></p>
       </div><!-- pastor -->
 
       <ul id="front-events">
@@ -149,7 +151,7 @@
 
         <?php
           $args = array(
-              'post_type' => 'post',
+              'post_type' => 'events',
               'post_status' => 'publish',
               'posts_per_page' => 3
           );
@@ -195,7 +197,7 @@ As we celebrate and reflect on these ten fruitful years of flourishing in the fa
 
         <h2>featured video</h2>
 
-        <iframe width="100%" height="315" src="//www.youtube.com/embed/IeUAwvovJ8g" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="//www.youtube.com/embed/A5QfZRrimPw" frameborder="0" allowfullscreen></iframe>
     </div><!-- front-content -->
 </div><!-- front-content-wrapper -->
 
