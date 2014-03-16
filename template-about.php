@@ -37,7 +37,7 @@ $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
 
             <?php } ?>
                         
-             <div class="container pageContent clearfix">
+             <div class="container pageContent padding-5 clearfix">
             
              <?php if ($sidebar  == 'yes') { ?>
                  

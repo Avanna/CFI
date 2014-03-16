@@ -4,8 +4,7 @@
 
 <?php get_header(); ?>
 
-   <?php 
-
+<?php 
 
 $bannerimg = get_post_meta(get_the_ID(), 'bannerimg', true);
 $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
@@ -74,6 +73,7 @@ $pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
                 $arguments = array(
                     'post_type' => 'post',
                     'post_status' => 'publish',
+                    'category_name' => 'news',
                     'paged' => $paged
                 );
 

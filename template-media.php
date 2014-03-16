@@ -15,6 +15,8 @@ $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
 
     <div class="topModule clearfix">
 
+        <?php get_template_part( 'content', 'page-top' ); ?>
+
         
               <?php if( $bannerimg) { ?>
                                              

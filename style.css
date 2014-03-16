@@ -19,6 +19,22 @@ Text Domain: cfi
     max-width: 1024px;
 }
 
+.container {
+    width:100% !important;
+}
+
+.container.padding-5 {
+    width:90% !important;
+}
+
+.container.pageTitle {
+    width:960px !important;
+}
+
+.padding-5 {
+    padding:5% !important;
+}
+
 h1, h2, h3, h4, h5 {
     text-transform: capitalize;
 }
@@ -210,6 +226,7 @@ header {
     /*border-radius:5px;*/
 }
 .mainNav ul li {
+    font-family: 'Roboto';
     font-size: 14px;
     float: left;
     letter-spacing: 0.03125;
@@ -224,7 +241,7 @@ header {
 
 .mainNav .current_page_item a, .mainNav ul li a:hover {
     /*background:#00BEBE;*/
-    color: #f35334;
+    color: #F1784D;
 }
 .mainNav ul li a {
     color: #fff;
@@ -237,23 +254,23 @@ header {
 #page-top {
     padding:0 5%;
     height:60px;
-    background:#7cb0b4;
-     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e');
+    background:#e67c57;
+     /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e');*/
     /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
     /*Element must have a height (not auto)*/
     /*All filters must be placed together*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e')";
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e')";*/
     /*Element must have a height (not auto)*/
     /*All filters must be placed together*/
-    background-image: -moz-linear-gradient(top, #7cb0b4, #6d9b9e);
+    /*background-image: -moz-linear-gradient(top, #7cb0b4, #6d9b9e);
     background-image: -ms-linear-gradient(top, #7cb0b4, #6d9b9e);
     background-image: -o-linear-gradient(top, #7cb0b4, #6d9b9e);
     background-image: -webkit-gradient(linear, center top, center bottom, from(#7cb0b4), to(#6d9b9e));
     background-image: -webkit-linear-gradient(top, #7cb0b4, #6d9b9e);
-    background-image: linear-gradient(top, #7cb0b4, #6d9b9e);
+    background-image: linear-gradient(top, #7cb0b4, #6d9b9e);*/
     /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
 
-    border-bottom: 2px #456b6e solid;
+    /*border-bottom: 2px #456b6e solid;*/
 }
 
 #page-nav {
@@ -261,9 +278,9 @@ header {
 }
 
 #page-nav li {
-    font-size:13px;
+    font-size:14px;
     float:left;
-    margin:0 24px 0 0;
+    margin:0 48px 0 0;
     color:#fff;
     line-height: 60px;
     font-weight:bold;
@@ -339,7 +356,8 @@ line-height: 28px;
     position: relative;
 }
 .headerImg img {
-    -webkit-border-radius: 3px 3px 0 0;
+    /*-webkit-border-radius: 3px 3px 0 0;*/
+    width: 100%;
     max-width: 100%;
 }
 
@@ -618,6 +636,96 @@ line-height: 28px;
     background:#fff;
 }
 
+/*==|== GALLERY ==========================================*/
+
+.ngg-albumoverview {
+    background:#f8f8f8;
+}
+
+.ngg-albumoverview {
+    width:90% !important;
+    overflow: hidden;
+    padding:5%;
+}
+
+.ngg-album {
+    float: left;
+    width:30% !important;
+    padding:0 !important;
+    background:#fff;
+    border:1px #ddd solid !important;
+    margin:0 4% 12px 0 !important;
+    position:relative;
+}
+.ngg-album:nth-child(3n+3) {
+    margin-right:0 !important;
+}
+
+.ngg-galleryoverview {
+    width:90% !important;
+    padding:5% !important;
+    background:#fff;
+}
+
+.ngg-gallery-thumbnail-box {
+    width:31%;
+    margin:0 2% 3% 0 !important;
+}
+
+.ngg-gallery-thumbnail {
+    width:100%;   
+}
+
+.ngg-albumtitle {
+    padding:9px 18px 0 !important;
+}
+
+.ngg-albumtitle a {
+    font-weight:normal;
+    color:#333;
+}
+
+.ngg-description {
+    padding:9px 18px;
+    background: #E64E04;
+    position: absolute;
+    bottom: 18px;
+}
+
+.ngg-description p {
+    margin:0 !!important;
+    padding:0 !important;
+    color:#fff;
+}
+
+.ngg-description p strong {
+    color:#fff;
+}
+
+.ngg-thumbnail {
+    width:100% !important;
+}
+
+.ngg-thumbnail img {
+    width:100%;
+    padding:0 !important;
+    margin:0 !important;
+    border:none !important;
+}
+
+
+
+.ngg-gallery-thumbnail-box:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.ngg-gallery-thumbnail img {
+    width:90%;
+    height:100%;
+    padding:9px !important;
+    border:1px #ddd solid !important;
+}
+
 .topModule {
    width: 90%;
    max-width: 1024px;
@@ -643,20 +751,22 @@ box-shadow: 0px 0px 10px #999;
 .pageTitle {
      padding: 35px 35px 33px 35px;
      position: relative;
-     background:#7cb0b4;
-     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e');
+     background: url(images/top_bg.jpg);
+     background-size: cover;
+     overflow:hidden;
+     /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e');*/
 /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
 /*Element must have a height (not auto)*/
 /*All filters must be placed together*/
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e')";
+/*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e')";*/
 /*Element must have a height (not auto)*/
 /*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #7cb0b4, #6d9b9e);
+/*background-image: -moz-linear-gradient(top, #7cb0b4, #6d9b9e);
 background-image: -ms-linear-gradient(top, #7cb0b4, #6d9b9e);
 background-image: -o-linear-gradient(top, #7cb0b4, #6d9b9e);
 background-image: -webkit-gradient(linear, center top, center bottom, from(#7cb0b4), to(#6d9b9e));
 background-image: -webkit-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: linear-gradient(top, #7cb0b4, #6d9b9e);
+background-image: linear-gradient(top, #7cb0b4, #6d9b9e);*/
 /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
 
 }
@@ -682,9 +792,12 @@ background-image: linear-gradient(top, #7cb0b4, #6d9b9e);
     font-weight: 400;
     color: #fff;
     font-size: 23px;
-    /*text-transform: uppercase;*/
-    margin-bottom: 5px;
     line-height: 35px;
+    /*text-transform: uppercase;*/
+    padding:6px 24px;
+    margin:6px 0 5px !important;
+    border:4px #fff solid;
+    display:inline-block;
 }
 .tagline h2, .pageTitle h2 {
     color: #fff;
@@ -695,8 +808,8 @@ background-image: linear-gradient(top, #7cb0b4, #6d9b9e);
     line-height: 28px;
 }
 .topModuleDetails, .pageContent {
-    background:#f8f8f8;
-     padding: 40px 35px 20px 35px;
+    background:#fff;
+     padding: 0px 0px 20px 0px;
      -webkit-border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
     border-radius: 0 0 3px 3px;
@@ -1402,7 +1515,7 @@ float: right;
     float:right;
     width:29%;
     padding:3%;
-    background:#7cb0b4;
+    background:#f8f8f8;
 }
 
 #church-meta h3 {
@@ -1446,6 +1559,13 @@ float: right;
     border-right:1px #ddd solid;
     border-bottom:1px #ddd solid;
     border-radius: 3px;
+}
+
+.church h1 {
+    padding:3px 18px;
+    border:2px #bbb solid;
+    margin:0 0 18px 0;
+    display:inline-block;
 }
 
 .church .postListMeta {
@@ -1814,6 +1934,12 @@ font-size: 11px;
 
 .staff-member h2, .staff-member {
     text-align: center;
+}
+
+.staff-member p {
+    padding:5px 9px;
+    border:2px #bbb solid;
+    text-transform: capitalize;
 }
 
 .staff-member:nth-child(3) {

@@ -12,8 +12,6 @@ $wmodulepage = get_post_meta(get_the_ID(), 'wmodulepage', true);
 $pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
 
 ?>
-
-
     <div class="topModule clearfix">
 
         <?php get_template_part( 'content', 'page-top' ); ?>
@@ -42,6 +40,14 @@ $pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
  
                     <?php
                         global $paged;
+                        $customPosts = array(); 
+
+                        function sort_by_content($a, $b) {
+                            if(count(explode(' ', $a->post_content)) == count(explode(' ', $b->post_content))) {
+                              return 0;
+                            }
+                            return (count(explode(' ', $a->post_content)) > count(explode(' ', $b->post_content))) ? -1 : 1;
+                        }
 
                         $args = array(
                             'post_type' => 'church',
@@ -53,7 +59,7 @@ $pagedescription = get_post_meta(get_the_ID(), 'pagedescription', true);
                     ?>
                                 
                     <?php if ($churches->have_posts()) : while ($churches->have_posts()) : $churches->the_post(); ?>
-  
+                    
                     <li class="church clearfix">
 
                         <?php 
