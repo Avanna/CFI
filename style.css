@@ -20,7 +20,13 @@ Text Domain: cfi
 }
 
 .container {
-    width:100% !important;
+    width:1000px;
+    margin:0 auto;
+}
+
+.front.container {
+   /* width:80% !important;*/
+    padding:18px;
 }
 
 .container.padding-5 {
@@ -73,7 +79,7 @@ li p {
     width:140px;
     height:140px;
     /*padding:8px;*/
-    border:7px #ddd solid;
+    border:7px #fff solid;
     -webkit-border-radius: 300px;
     -moz-border-radius: 300px;
     border-radius: 300px;
@@ -158,7 +164,7 @@ li p {
 }
 body {
     font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
-    background:#F7F5E7  url(images/light-denim.png);
+    background:#f7f7f7  /*url(images/light-denim.png)*/;
     font-size: 0.8125em;
     color:#333;
     line-height:1.6;
@@ -168,14 +174,13 @@ header {
     /*background:#0b1c22 url(images/main_slide.jpg) repeat-x;*/
     height: 120px;
     position: relative;
-    /*border-bottom: 3px #222 double;*/
+    margin-bottom:36px;
     background: #362B23 /*url(images/dashed_bg.jpg) repeat-x bottom*/;
     -moz-box-shadow: 0px 1px 2px #222;
     -webkit-box-shadow: 0px 1px 2px #222;
     box-shadow: 0px 1px 2px #222;
     filter: progid:DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#222');
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 180, Color = '#222')";
-
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#5f4a3a', endColorstr = '#362b23');
     /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
     /*Element must have a height (not auto)*/
@@ -338,11 +343,11 @@ line-height: 28px;
 }
 
 .slider {
-    margin: 0 0 48px 0;
     width: 100%;
     padding:0;
     position: relative;
     display: none;
+    overflow:hidden;
     -moz-box-shadow: 1px 1px 2px #222;
     -webkit-box-shadow: 1px 1px 2px #222;
     box-shadow: 1px 1px 2px #222;
@@ -427,25 +432,18 @@ line-height: 28px;
 
 
 #front-content-wrapper {
-    width:90%;
     max-width: 1024px;
     min-height: 300px;
     /*padding:18px 0 0 0;*/
     margin:0 auto 36px auto;
     background:#fff /*url(images/dashed_bg.jpg) repeat-x top*/;
-    border-top:4px #333 double;
-    -moz-box-shadow: 0px 0px 10px #8f8d8e;
-    -webkit-box-shadow: 0px 0px 10px #8f8d8e;
-    box-shadow: 0px 0px 10px #8f8d8e;
-    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
-    
 }
 
 #front-sidebar {
     float:left;
     width:33%;
     min-height:400px;
-    background:#7cb0b4 /*url(images/page_bg.jpg)*/;
+    background: #f8f8f8;
 }
 
 #front-sidebar h2, #front-sidebar h3 {
@@ -456,7 +454,6 @@ line-height: 28px;
     font-size: 16px;
     background:#fff;
     text-align: center;
-    border-bottom: 4px #33575a double;
 }
 
 #front-sermons {
@@ -485,11 +482,11 @@ line-height: 28px;
     width:80%;
     padding:24px 0;
     margin:0 auto;
-    background:#8dbdc1 /*url(images/page_bg.jpg)*/;
+    background:#f9f9f9;
     text-align: center;
     border-radius: 3px;
-     border-right: 1px #52888c solid;
-    border-bottom: 1px #52888c solid;
+    border-right: 1px #f0f0f0 solid;
+    border-bottom: 1px #f0f0f0 solid;
 }
 
 #pastor p a {
@@ -513,7 +510,7 @@ line-height: 28px;
     width:57%;
     min-height:400px;
     padding:4% 5%;
-    background:#f8f8f8;
+    background:#fff;
 }
 
 #front-events {
@@ -526,19 +523,20 @@ line-height: 28px;
 #front-events li {
     padding:18px 18px 9px;
     margin:0 0 6px 0;
-    /*border-right: 1px #ddd solid;
-    border-bottom: 1px #ddd solid;*/
-    background: #8dbdc1;
+    background: #fff;
     border-radius: 3px;
-    border-right: 1px #52888c solid;
-    border-bottom: 1px #52888c solid;
+    border-right: 1px #ddd solid;
+    border-bottom: 1px #ddd solid;
 }
 
 #front-events li img {
     float:left;
     width:72px;
+    padding:5px;
     margin:0 18px 18px 0;
-    border:5px #ddd solid;
+    background:#fff;
+    border-right:1px #ddd solid;
+    border-bottom:1px #ddd solid;
 }
 
 #front-events h3 {
@@ -564,13 +562,11 @@ line-height: 28px;
 }
 
 #front-news li {
-    padding:18px;
+    /*padding:0;*/
     margin:0 0 12px 0;
     position:relative;
     background:#fff;
-    border-right: 1px #ddd solid;
     border-bottom: 1px #ddd solid;
-    border-radius: 3px;
 }
 
 #front-news .date {
@@ -651,11 +647,12 @@ line-height: 28px;
 .ngg-album {
     float: left;
     width:30% !important;
-    padding:0 !important;
+    padding:12px 18px !important;
     background:#fff;
     border:1px #ddd solid !important;
     margin:0 4% 12px 0 !important;
     position:relative;
+    border-radius:9px;
 }
 .ngg-album:nth-child(3n+3) {
     margin-right:0 !important;
@@ -677,12 +674,13 @@ line-height: 28px;
 }
 
 .ngg-albumtitle {
-    padding:9px 18px 0 !important;
+    padding:0 !important;
 }
 
 .ngg-albumtitle a {
     font-weight:normal;
     color:#333;
+    text-transform: capitalize;
 }
 
 .ngg-description {
@@ -713,8 +711,6 @@ line-height: 28px;
     border:none !important;
 }
 
-
-
 .ngg-gallery-thumbnail-box:nth-child(3n+3) {
     margin-right: 0;
 }
@@ -727,26 +723,21 @@ line-height: 28px;
 }
 
 .topModule {
-   width: 90%;
-   max-width: 1024px;
-   min-height:500px;
+    width: 90%;
+    max-width: 1024px;
+    min-height:500px;
     margin:0 auto;
     margin-bottom: 30px !important;
     z-index: 99;
     background: white;
     position: relative;
-    -moz-box-shadow: 0px 0px 10px #999;
--webkit-box-shadow: 0px 0px 10px #999;
-box-shadow: 0px 0px 10px #999;
-/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
-
 }
 .tagline {
     text-align: center;
     padding: 22px 35px;
     margin:0 0 36px 0;
-     position: relative;
-     background:#fff;
+    position: relative;
+    background:#fff;
 }
 .pageTitle {
      padding: 35px 35px 33px 35px;
@@ -755,19 +746,19 @@ box-shadow: 0px 0px 10px #999;
      background-size: cover;
      overflow:hidden;
      /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e');*/
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-/*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e')";*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-/*background-image: -moz-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: -ms-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: -o-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#7cb0b4), to(#6d9b9e));
-background-image: -webkit-linear-gradient(top, #7cb0b4, #6d9b9e);
-background-image: linear-gradient(top, #7cb0b4, #6d9b9e);*/
-/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+    /*Element must have a height (not auto)*/
+    /*All filters must be placed together*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#7cb0b4', endColorstr = '#6d9b9e')";*/
+    /*Element must have a height (not auto)*/
+    /*All filters must be placed together*/
+    /*background-image: -moz-linear-gradient(top, #7cb0b4, #6d9b9e);
+    background-image: -ms-linear-gradient(top, #7cb0b4, #6d9b9e);
+    background-image: -o-linear-gradient(top, #7cb0b4, #6d9b9e);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#7cb0b4), to(#6d9b9e));
+    background-image: -webkit-linear-gradient(top, #7cb0b4, #6d9b9e);
+    background-image: linear-gradient(top, #7cb0b4, #6d9b9e);*/
+    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
 
 }
 
@@ -775,8 +766,7 @@ background-image: linear-gradient(top, #7cb0b4, #6d9b9e);*/
     color:#fff;
 }
 
-.tagline:before, .pageTitle:before {
-    
+.tagline:before, .pageTitle:before {  
     content: '';
     position: absolute;
     bottom: -3px;
@@ -799,6 +789,7 @@ background-image: linear-gradient(top, #7cb0b4, #6d9b9e);*/
     border:4px #fff solid;
     display:inline-block;
 }
+
 .tagline h2, .pageTitle h2 {
     color: #fff;
     font-family: 'Oswald', sans-serif;
@@ -807,6 +798,7 @@ background-image: linear-gradient(top, #7cb0b4, #6d9b9e);*/
     font-size: 16px;
     line-height: 28px;
 }
+
 .topModuleDetails, .pageContent {
     background:#fff;
      padding: 0px 0px 20px 0px;
@@ -1521,9 +1513,9 @@ float: right;
 #church-meta h3 {
     font-size:16px !important;
     font-size: 16px;
-    background: #fff;
+    /*background: #fff;
     text-align: center;
-    border-bottom: 4px #33575a double;
+    border-bottom: 4px #33575a double;*/
 }
 
 #church-meta p {
@@ -1531,13 +1523,13 @@ float: right;
 }
 
 #church-address {
-    padding:6%;
+    /*padding:6%;*/
     margin:0 0 36px 0;
-    background: #8dbdc1 /*url(images/page_bg.jpg)*/;
+    /*background: #8dbdc1 url(images/page_bg.jpg);*/
     /*text-align: center;*/
-    border-radius: 3px;
+    /*border-radius: 3px;
     border-right: 1px #52888c solid;
-    border-bottom: 1px #52888c solid;
+    border-bottom: 1px #52888c solid;*/
 }
 
 #church-address p {

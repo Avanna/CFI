@@ -1,72 +1,10 @@
 <?php get_header(); ?>
 
-<div class="container slider">
+<div class="container front">
 
-    <div class="flexslider">
-      <ul class="slides">
-
-        <?php if ( function_exists( 'ot_get_option' ) ) {
-
-          /* get the slider array */
-          $slides = ot_get_option( 'my_slider', array() );
-
-          if ( ! empty( $slides ) ) {
-            foreach( $slides as $slide ) {
-
-              echo '<li><img src="'.$slide['image'].'" alt="'.$slide['title'].'" /><div class="slideContent slideLeft">';
-
-              if($slide['title']) {
-                echo '<h1>'.$slide['title'].'</h1>';
-              }
-              if($slide['title2']) {
-
-               echo ' <h2>'.$slide['title2'].'</h2> ';
-             }
-
-             if($slide['btnurl']) { 
-
-               echo ' <a class="button-big rounded3 '.$slide['btncolor'].'" href="'.$slide['btnurl'].'">'.$slide['btntext'].'</a>';
-
-             }
-
-             echo ' </div></li>';
-
-           }
-
-         } 
-
-       }
-
-       ?>
-     </ul>
-   </div><!-- flex-slider -->
-
- </div><!-- container slider -->
-
- <!-- <div class="tagline">
-
-      <h1><?php echo ot_get_option('tagline') ?></h1>
-      <h2><?php echo ot_get_option('taglinedescription') ?></h2>
-
-  </div> -->
-
-  
-
- <!--  <div class="container topModuleDetails clearfix">
-
-      <div class="eight columns topModuleAbout">
-
-          <?php echo ot_get_option('leftcontent') ?>
-
-      </div>
-
-      <div class="eight columns topModuleTestimonial">
-
-         <?php echo ot_get_option('rightcontent') ?>             
-
-      </div>
-
-  </div> -->
+    <div class="slider">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/slide.jpg" alt="introductory image">
+   </div><!-- .slider -->
 
 <div id="front-content-wrapper" class="clearfix">
     <div id="front-sidebar">
@@ -307,4 +245,7 @@ As we celebrate and reflect on these ten fruitful years of flourishing in the fa
 
 <?php } ?>
 
+</div><!-- container -->
+
 <?php get_footer(); ?>
+
